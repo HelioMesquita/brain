@@ -1,5 +1,5 @@
 # brain
-A Universal (iPhone, iPad) App for iOS with Landscape, using UISplitViewController
+A Universal App (iPhone, iPad) for iOS with Landscape, using UISplitViewController
 
 ![alt text](https://www.iconsdb.com/icons/preview/tropical-blue/brain-2-xxl.png)
 

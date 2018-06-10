@@ -1,6 +1,8 @@
 # brain
 A Universal App for iOS with Landscape, using UISplitViewController
 
+![alt text](https://www.iconsdb.com/icons/preview/tropical-blue/brain-2-xxl.png)
+
 How to run this project:
 
 * Install Xcode with version 9.4 or higher

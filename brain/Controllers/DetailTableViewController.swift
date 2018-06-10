@@ -1,8 +1,10 @@
 import UIKit
 
-class DetailTableViewController: UITableViewController {
+class DetailTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   var item: Item?
+
+  @IBOutlet weak var tableView: UITableView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -10,13 +12,15 @@ class DetailTableViewController: UITableViewController {
     tableView.registerCell(DetailHeaderTableViewCell.self)
     tableView.allowsSelection = false
     view.backgroundColor = .defaultBackground
+    tableView.backgroundColor = .defaultBackground
   }
 
-  override func numberOfSections(in tableView: UITableView) -> Int {
+  func numberOfSections(in tableView: UITableView) -> Int {
+    guard let _ = item else { return 0 }
     return 2
   }
 
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if section == 1 {
       return 1
     } else {
@@ -25,7 +29,7 @@ class DetailTableViewController: UITableViewController {
     }
   }
 
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if indexPath.section == 0 {
       let cell = tableView.dequeueReusableCell(withIdentifier: DetailHeaderTableViewCell.identifier, for: indexPath) as! DetailHeaderTableViewCell
       cell.present(item: item)

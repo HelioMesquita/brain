@@ -24,7 +24,6 @@ class MainPresenterTest: QuickSpec {
     let managerEntrypoint = ManagerEntrypoint(baseURL: "www.google.com.br/test")
     var dummyViewController: DummyMainViewController!
 
-
     describe("#handleInfinitScroll") {
       beforeEach {
         dummyViewController = DummyMainViewController()

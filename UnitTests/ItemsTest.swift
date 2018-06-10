@@ -10,7 +10,6 @@ class ItemsTest: QuickSpec {
 
     let author = Author(name: "name", headline: "headline", description: "description", quote: "quote", imageUrl: URL(string: "url")!)
 
-
     describe("#authorsName") {
       context("when contains one author") {
         it("returns name") {

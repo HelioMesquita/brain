@@ -2,9 +2,9 @@ import UIKit
 
 class DetailTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-  var item: Item?
-
   @IBOutlet weak var tableView: UITableView!
+
+  var item: Item?
 
   override func viewDidLoad() {
     super.viewDidLoad()

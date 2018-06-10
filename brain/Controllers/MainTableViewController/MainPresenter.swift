@@ -9,8 +9,8 @@ protocol MainPresentable: class {
 
 class MainPresenter {
 
-  weak var delegate: MainPresentable?
   let interactor: Interactor<Courses>?
+  weak var delegate: MainPresentable?
   private var percentageOfInfinitScroll = 0.8
 
   init(interactor: Interactor<Courses>, delegate: MainPresentable) {

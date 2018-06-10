@@ -1,9 +1,10 @@
 import Foundation
 
 class ManagerEntrypoint {
+
   private let baseURL: String
-  var page = 1
   private let queryParam = "?page="
+  var page = 1
 
   init(baseURL: String) {
     self.baseURL = baseURL

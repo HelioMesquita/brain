@@ -1,8 +1,9 @@
 import Alamofire
 
 class Interactor<S> where S: Decodable {
-  var url: String
   typealias Model = S
+
+  var url: String
 
   init(url: String) {
     self.url = url

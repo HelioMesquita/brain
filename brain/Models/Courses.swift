@@ -1,6 +1,7 @@
 import Foundation
 
 struct Courses: Decodable {
+
 	var page: Int
 	var count: Int
 	var items = [Item]()

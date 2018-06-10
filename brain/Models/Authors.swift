@@ -1,6 +1,7 @@
 import Foundation
 
 struct Author: Decodable {
+
 	let name: String
 	let headline: String?
 	let description: String?

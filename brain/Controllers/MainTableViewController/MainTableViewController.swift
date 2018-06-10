@@ -4,11 +4,10 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
   
   @IBOutlet weak var tableView: UITableView!
 
-  let refresher = UIRefreshControl()
+  var refresher: UIRefreshControl!
   var courses: Courses?
   var presenter: MainPresenter?
   lazy var managerEntrypoint = ManagerEntrypoint(baseURL: Bundle.main.getApiEntrypoint())
-
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -16,29 +15,33 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
     tableView.backgroundColor = .defaultBackground
     tableView.registerCell(MainTableViewCell.self)
     navigationItem.title = NSLocalizedString("allCourses", comment: "")
+    setRefresher()
     load()
   }
 
   func setRefresher() {
+    refresher = UIRefreshControl()
+    tableView.addSubview(refresher)
     refresher.addTarget(self, action: #selector(load), for: .valueChanged)
-    tableView.refreshControl = refresher
   }
 
   @objc func load() {
-    tableView.refreshControl?.beginRefreshing()
+    courses = nil
+    managerEntrypoint.page = 1
+    refresher.beginRefreshing()
     let interactor = Interactor<Courses>(url: managerEntrypoint.getCurrentURL())
     presenter = MainPresenter(interactor: interactor, delegate: self)
     presenter?.present()
   }
 
   func onLoad(courses: Courses) {
-    tableView.refreshControl?.endRefreshing()
+    refresher.endRefreshing()
     self.courses = courses
     tableView.reloadData()
   }
 
   func onError() {
-    tableView.refreshControl?.endRefreshing()
+    refresher.endRefreshing()
     tableView.tableFooterView = nil
 
     let alertController = UIAlertController(title: NSLocalizedString("conectionProblem", comment: ""), message: "", preferredStyle: UIAlertControllerStyle.alert)

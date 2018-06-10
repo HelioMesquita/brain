@@ -1,0 +1,70 @@
+PODS:
+  - Alamofire (4.7.0)
+  - libwebp (0.6.0):
+    - libwebp/core (= 0.6.0)
+    - libwebp/dec (= 0.6.0)
+    - libwebp/demux (= 0.6.0)
+    - libwebp/dsp (= 0.6.0)
+    - libwebp/enc (= 0.6.0)
+    - libwebp/mux (= 0.6.0)
+    - libwebp/utils (= 0.6.0)
+    - libwebp/webp (= 0.6.0)
+  - libwebp/core (0.6.0):
+    - libwebp/webp
+  - libwebp/dec (0.6.0):
+    - libwebp/core
+  - libwebp/demux (0.6.0):
+    - libwebp/core
+  - libwebp/dsp (0.6.0):
+    - libwebp/core
+  - libwebp/enc (0.6.0):
+    - libwebp/core
+  - libwebp/mux (0.6.0):
+    - libwebp/core
+  - libwebp/utils (0.6.0):
+    - libwebp/core
+  - libwebp/webp (0.6.0)
+  - Mockingjay (2.0.1):
+    - Mockingjay/Core (= 2.0.1)
+    - Mockingjay/XCTest (= 2.0.1)
+  - Mockingjay/Core (2.0.1):
+    - URITemplate (~> 2.0)
+  - Mockingjay/XCTest (2.0.1):
+    - Mockingjay/Core
+  - Nimble (7.0.3)
+  - Quick (1.2.0)
+  - SDWebImage/Core (4.3.3)
+  - SDWebImage/WebP (4.3.3):
+    - libwebp (~> 0.5)
+    - SDWebImage/Core
+  - URITemplate (2.0.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - Mockingjay
+  - Nimble
+  - Quick
+  - SDWebImage/WebP
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - libwebp
+    - Mockingjay
+    - Nimble
+    - Quick
+    - SDWebImage
+    - URITemplate
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  libwebp: 1d5a07c2eb97f9c31bd5f154bb82efc0ea67c6a2
+  Mockingjay: 11a621880d2887f1775bdcf824341eb68f218450
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  URITemplate: ace0c4c46dcf8afe6e89b4060621852886b15c3b
+
+PODFILE CHECKSUM: 6c6e5e42d1538ed21f49c49a1f9126f80560e2ea
+
+COCOAPODS: 1.5.0

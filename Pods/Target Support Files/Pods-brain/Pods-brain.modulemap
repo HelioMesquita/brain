@@ -1,0 +1,6 @@
+framework module Pods_brain {
+  umbrella header "Pods-brain-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -22,3 +22,14 @@ $ pod install
 * Open xcworkspace file
 
 * Select the device to build and click play
+
+Demo
+
+* iPhone 8 (4.7 inch)
+https://media.giphy.com/media/1rKa0U6HUkWfV6vV3L/giphy.gif
+
+* iPhone 8 plus (5.5 inch)
+https://media.giphy.com/media/9MITRrE1tJWabEm7qE/giphy.gif
+
+* iPhone X (5.8 inch)
+https://media.giphy.com/media/9GIEat6A5alZTTwT2Y/giphy.gif

@@ -19,7 +19,7 @@ $ pod install
 
 * Open in finder the project directory
 
-* Open xcworkspace file
+* Open brain.xcworkspace file
 
 * Select the device to build and click play
 
